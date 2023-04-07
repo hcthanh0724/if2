@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Xin mời nhập cạnh hình vuông: <input type="number" id="z">;
+<button type="button" onclick="s()">Tính diện tính</button>;
+<div id="b"></div>
+
+<script>
+  function s() {
+    let a = document.getElementById("z").value;
+    let s = a*a;
+    document.getElementById("b").innerHTML = ("Diện tích hình vuông là:" +s);
+  }
+</script>
+</body>
+</html>

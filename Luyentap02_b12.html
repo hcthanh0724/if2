@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Tính lãi suất gửi ngân hàng</h1>
+<br><br>
+<p>Nhập số tiền gửi:</p><input type="text" id="money">
+<br><br>
+<p>Kỳ hạn:</p>
+<select  id="b">
+  <option> -Chọn kỳ hạn-</option>
+  <option value="3"> 3 Tháng</option>
+  <option value="6"> 6 Tháng </option>
+  <option value="9"> 9 Tháng</option>
+  <option value="12"> 12 Tháng</option>
+  <option value="18"> 18 Tháng</option>
+</select>
+<button type="button" onclick="check()">Kiểm tra tiền lãi</button>
+<div id="z"></div>
+
+<script>
+  function check(){
+    let money = document.getElementById("money").value;
+    let month = document.getElementById("b").value;
+    // let giatri = month.options[month.selectedIndex].text;
+    alert("clgday" + month.options.value === "3")
+    let ls = (money / 12) * month
+    if (giatri.value === 3){
+        let ls = (money / 12) *3
+      document.getElementById("z").innerHTML= ("Lãi suất hàng tháng của bạn là 6%. Tiền lãi hàng tháng của bạn là" + ls * 3)
+    if (giatri == 6)  {
+      document.getElementById("z").innerHTML= ("Lãi suất hàng tháng của bạn là 6.5%. Tiền lãi hàng tháng của bạn là" +ls * 6)
+    }
+      if (giatri == 9)  {
+        document.getElementById("z").innerHTML= ("Lãi suất hàng tháng của bạn là 7%. Tiền lãi hàng tháng của bạn là" +ls * 9)
+      }
+      if (giatri == 12)  {
+        document.getElementById("z").innerHTML= ("Lãi suất hàng tháng của bạn là 8%. Tiền lãi hàng tháng của bạn là" +ls * 12)
+      }
+      if (giatri == 18)  {
+        document.getElementById("z").innerHTML= ("Lãi suất hàng tháng của bạn là 9%. Tiền lãi hàng tháng của bạn là" +ls * 18)
+      }
+    }
+  }
+</script>
+</body>
+</html>

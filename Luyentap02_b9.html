@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra tam giác </h1>
+<br><br>
+<p>Xin mời nhập giá trị 3 cạnh</p>
+<br><br>
+<p>Cạnh 1:</p><input type="number" id="a">
+<br><br>
+<p>Cạnh 2:</p><input type="number" id="b">
+<br><br>
+<p>Cạnh 3:</p><input type="number"id="c">
+<br><br>
+<button type="button" onclick="check()">Kiểm tra</button>
+<div id="z"></div>
+
+<script>
+  function check (){
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    if (a > 0 && b > 0 && c > 0){
+      if (a + b > c){
+        if (b + c > a){
+          if (a + c > b){
+          }
+        }
+      }
+      document.getElementById("z").innerHTML= ("3 cạnh đã cho có thể tạo thành 1 tam giác")
+    }
+    else {
+      document.getElementById("z").innerHTML=("3 cạnh đã cho không phải là 1 tam giác")
+    }
+  }
+</script>
+</body>
+</html>

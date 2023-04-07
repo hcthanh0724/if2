@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Tính thuế thu nhập cá nhân</h1>
+<br><br>
+<p>Xin mời nhập thu nhập hàng tháng:</p><input type="number" id="tax">Đồng
+<br><br>
+<button type="button"  onclick="check()">Kiểm tra </button>
+<div id="z"></div>
+<script>
+  function check() {
+    let tax = document.getElementById("tax").value;
+    let tax1 = (tax * 10 /100) - 250000
+    let tax2 = (tax * 15 /100) - 750000
+    let tax3 = (tax * 20 /100) - 1650000
+    let tax4 = (tax * 25 /100) - 3250000
+    let tax5 = (tax * 30 /100) - 5850000
+    let tax6 = (tax * 35 /100) - 9850000
+    if (tax>0 && tax < 5000000){
+      document.getElementById("z").innerHTML= ("Thuế suất hiện tại của bạn là 5%. Số tiền thuế hàng tháng của bạn là" +tax *5 / 100)
+    }
+    else if (tax < 10000000){
+      document.getElementById("z").innerHTML= ("Thuế suất hiện tại của bạn là 10%. Số tiền thuế hàng tháng của bạn là" +tax1 )
+    }
+    else if (tax < 18000000){
+      document.getElementById("z").innerHTML= ("Thuế suất hiện tại của bạn là 15%. Số tiền thuế hàng tháng của bạn là" +tax2 )
+    }
+    else if (tax < 32000000){
+      document.getElementById("z").innerHTML= ("Thuế suất hiện tại của bạn là 20%. Số tiền thuế hàng tháng của bạn là" +tax3 )
+    }
+    else if (tax < 52000000){
+      document.getElementById("z").innerHTML= ("Thuế suất hiện tại của bạn là 25%. Số tiền thuế hàng tháng của bạn là" +tax4 )
+    }
+    else if (tax < 80000000){
+      document.getElementById("z").innerHTML= ("Thuế suất hiện tại của bạn là 30%. Số tiền thuế hàng tháng của bạn là" +tax5 )
+    }
+    else {
+      document.getElementById("z").innerHTML = ("Thuế suất hiện tại của bạn là 35%. Số tiền thuế hàng tháng của bạn là" +tax6)
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Nhập mét:<input type="number" id="b">
+<button type="button" onclick="cd()">Chuyển đổi</button>
+<div id="z"></div>
+<script>
+  function cd () {
+    let meter = document.getElementById("b").value;
+    let ft = meter * 3.2808 ;
+    document.getElementById("z").innerHTML= ("=" +ft + "feet");
+  }
+</script>
+</body>
+</html>

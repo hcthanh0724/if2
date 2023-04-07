@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+Xin mời nhập chiều dài <input type="number" id="a"> <br> <br>
+Xin mời nhập chiều rộng <input type="number" id="b"> <br>
+<button type="button" onclick="s()">Tính diện tích</button>
+<div id="c"> </div>;
+<script>
+  function s(){
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let s = a * b;
+    document.getElementById("c").innerHTML = ("Diện tích hình chữ nhật là:" +s);
+  }
+</script>
+</body>
+</html>

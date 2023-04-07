@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Xin mời nhập cạnh kề thứ nhất <input type="number" id="a">
+Xin mời nhập cạnh kề thứ hai  <input type="number" id="b">
+<button type="button" onclick="s()">Tính</button>
+<div id="z"></div>
+<script>
+    function s(){
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let s = (a * b)/2;
+        document.getElementById("z").innerHTML = ("Diện tích hình tam giác vuông là" +s);
+    }
+</script>
+</body>
+</html>

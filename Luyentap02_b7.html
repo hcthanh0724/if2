@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    h1{
+      color: bisque;
+      background-color: #111111;
+      text-align: center;
+    }
+    p{
+      color: #111111;
+    }
+    button {
+      color: violet;
+      background-color: lightyellow;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h1>Giaỉ phương trình bậc 2</h1>
+<br><br>
+<h2>Phương trình bậc 2 là phương trình có dạng ax^2 + bx +c = 0</h2>
+<br><br>
+<p>Xin mời nhập a</p><input type="number" id="a">
+<br><br>
+<p>Xin mời nhập b</p><input type="number" id="b">
+<br><br>
+<p>Xin mời nhập c</p><input type="number" id="c">
+<br><br>
+<button type="button" onclick="solve()">Solve</button>
+<br>
+<div id="y"></div>
+
+<script>
+  function solve (){
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    let delta = (b*b) - (4 *a *c);
+    let xb = (-b) /(2*a);
+    let x1 = (-b + Math.sqrt(delta)) / (2*a);
+    let x2 = (-b - Math.sqrt(delta)) / (2*a);
+    if (delta <0){
+      document.getElementById("y").innerHTML = ("Phương trình vô nghiệm")
+
+    }
+    else if (delta == 0){
+      document.getElementById("y").innerHTML = ("Phương trình có nghiệm kép là x1 =" +xb)
+    }
+    else {
+      document.getElementById("y").innerHTML = ("Phương trình có 2 nghiệm là X1 =" +x1 + "và X2=" +x2)
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Cổng điện lực quốc gia</h1>
+<br><br>
+<p>Xin mời nhập lượng điện tiêu thụ:</p><input type="number" id="a"><p>kWh</p>
+<br><br>
+<button type="button" onclick="check()">Kiểm tra</button>
+<div id="z"></div>
+
+<script>
+  function check(){
+    let a = document.getElementById("a").value;
+    if ( a > 0 && a < 50){
+      document.getElementById("z").innerHTML= ("Số tiền bạn phải trả tháng này là" +a * 1484)
+    }
+    else if ( a < 100 ){
+      document.getElementById("z").innerHTML= ("Số tiền bạn phải trả tháng này là" +a * 1533)
+    }
+    else if ( a < 200 ){
+      document.getElementById("z").innerHTML= ("Số tiền bạn phải trả tháng này là" +a * 1786)
+    }
+    else if ( a < 300 ){
+      document.getElementById("z").innerHTML= ("Số tiền bạn phải trả tháng này là" +a * 2242)
+    }
+    else if ( a < 400 ){
+      document.getElementById("z").innerHTML= ("Số tiền bạn phải trả tháng này là" +a * 2503)
+    }
+    else {
+      document.getElementById("z").innerHTML= ("Số tiền bạn phải trả tháng này là" +a * 2587)
+    }
+  }
+</script>
+</body>
+</html>

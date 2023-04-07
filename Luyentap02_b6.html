@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    h1{
+      color: darkblue;
+      background-color: red;
+      text-align: center;
+    }
+    button{
+      color: white;
+      background-color: #111111;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h1>Gỉai phương trình bậc 1:</h1>
+<br>
+<p>Phương trình bậc 1 là phương trình có dạng ax + b = c</p>
+<br> <br>
+Xin mời nhập a: <input type="number" id="a">
+<br> <br>
+Xin mời nhập b: <input type="number" id="b">
+<br><br>
+Xin mời nhập c: <input type="number" id="c">
+<br><br>
+<button type="button" onclick="solve()">Gỉai phương trình </button>
+<div id="z"></div>
+<script>
+  function solve() {
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let c = document.getElementById("c").value;
+    let x = (c - b)/a;
+    document.getElementById("z").innerHTML = ("X=" +x)
+  }
+</script>
+</body>
+</html>
