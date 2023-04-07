@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            background-color: hotpink;
+        }
+        button{
+            width: 100%;
+        }
+        input{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4" style="text-align: right">
+            <input type="text" id="z">
+        </th>
+        <div></div>
+    </tr>
+    <tr>
+        <th><button value="1" onclick="number(this.value)" >1</button></th>
+        <th><button value="2" onclick="number(this.value)">2</button></th>
+        <th><button value="3" onclick="number(this.value)">3</button></th>
+        <th><button value="+" onclick="number(this.value)">+</button></th>
+    </tr>
+    <tr>
+        <th><button value="4" onclick="number(this.value)">4</button></th>
+        <th><button value="5" onclick="number(this.value)">5</button></th>
+        <th><button value="6" onclick="number(this.value)">6</button></th>
+        <th><button value="-" onclick="number(this.value)">-</button></th>
+    </tr>
+    <tr>
+        <th><button value="7" onclick="number(this.value)">7</button></th>
+        <th><button value="8" onclick="number(this.value)">8</button></th>
+        <th><button value="9" onclick="number(this.value)">9</button></th>
+        <th><button value="*" onclick="number(this.value)">*</button></th>
+    </tr>
+    <tr>
+        <th><button type="reset" onclick="reset()">C</button></th>
+        <th><button value="0" onclick="number(this.value)">0</button></th>
+        <th><button onclick="result()">=</button></th>
+        <th><button value="/" onclick="number(this.value)">/</button></th>
+    </tr>
+</table>
+</body>
+</html>
+
+<script>
+    let view = document.getElementById('z');
+    function number(value){
+        view.value += value
+
+    }
+    function result(){
+        let result = eval(view.value)
+        view.value = result
+    }
+    function reset (){
+        view.value = ''
+    }
+</script>

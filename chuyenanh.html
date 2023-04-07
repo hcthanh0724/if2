@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="click1()">
+<img src="https://tse2.mm.bing.net/th?id=OIP.KyXJx_Fp8JGHq8dy_j4LhwHaFj&pid=Api&P=0" id="i1"
+     width="500" height="400">
+</body>
+</html>
+
+<script>
+    const anh1 = 'https://tse2.mm.bing.net/th?id=OIP.KyXJx_Fp8JGHq8dy_j4LhwHaFj&pid=Api&P=0'
+    const anh2 = 'https://cdni.rbth.com/rbthmedia/images/2018.02/original/5a8fee2785600a725b085190.jpg'
+    const anh3 = 'https://tse2.mm.bing.net/th?id=OIP.gX1vztYQD0ON4DXPzeA2IQHaE8&pid=Api&P=0'
+    function enterKey() {
+        let img1 = document.getElementById('i1')
+        let srcB = img1.src
+        if (srcB === anh1) {
+            img1.src = anh2
+        } else if (srcB === anh2) {
+            img1.src = anh3
+        } else {
+            img1.src = anh1
+        }
+
+    }
+
+        function enter1(evt) {
+            switch (evt.keyCode){
+                case 50:
+                    enterKey()
+                    break
+                case 51:
+                    enterKey()
+                    break
+                case 52:
+                    enterKey()
+                    break
+            }
+
+    }
+    function click1(){
+        window.addEventListener('keydown', enter1)
+    }
+</script>
